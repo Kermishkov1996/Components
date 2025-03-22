@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+	      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+	      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<title>Components</title>
+</head>
+
+<body>
+
+<header class="header">
+	<a href="" class="header__logo">Logotype</a>
+	<div class="header__menu menu">
+		<div class="menu__icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<nav class="menu__body">
+			<ul class="menu__list">
+				<li class="menu__item"><a href="#radio" class="menu__link">Радиокнопка</a></li>
+				<li class="menu__item"><a href="#tasks" class="menu__link">Список задач</a></li>
+				<li class="menu__item"><a href="#slider-control" class="menu__link">Ползунок</a></li>
+				<li class="menu__item"><a href="#slider-container" class="menu__link">Слайдер</a></li>
+				<li class="menu__item"><a href="#accordion" class="menu__link">Аккордион</a></li>
+				<li class="menu__item"><a href="#popup" class="menu__link">Модальное окно</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="container">
+
+	<section class="label-floating">
+		<input type="text" class="label-floating__input" required>
+		<div class="label-line">Введите своё имя</div>
+	</section>
+
+	<section class="checkbox">
+		<input type="checkbox" class="checkbox__control" id="checkbox-1">
+		<label for="checkbox-1" class="checkbox__label">Принять пользовательские соглашения</label>
+	</section>
+
+	<section class="radio" id="radio">
+		<h1>Радиокнопка</h1>
+		<ul class="radio__list">
+			<li>
+				<input type="radio" class="radio__input" id="radio-1" name="category" hidden>
+				<label for="radio-1" class="radio__label">Переключатель 1</label>
+			</li>
+			<li>
+				<input type="radio" class="radio__input" id="radio-2" name="category" hidden>
+				<label for="radio-2" class="radio__label">Переключатель 2</label>
+			</li>
+			<li>
+				<input type="radio" class="radio__input" id="radio-3" name="category" hidden>
+				<label for="radio-3" class="radio__label">Переключатель 3</label>
+			</li>
+		</ul>
+	</section>
+
+	<section class="popup" id="popup">
+		<h1>Модальное окно (Popup)</h1>
+		<button class="popup__button">Открыть модальное окно</button>
+		<div class="modal">
+			<div class="modal__box">
+				<h2 class="modal__title">Модальное окно</h2>
+				<div class="modal__content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque, aut consectetur consequatur,
+						distinctio dolore dolorum eligendi est eum explicabo magnam minima nam nesciunt nulla obcaecati officia
+						quaerat quam quos recusandae reprehenderit sapiente, vel voluptatibus voluptatum. Adipisci alias ducimus
+						hic in maiores, tempora ullam? Alias architecto culpa dolorum eligendi eveniet ex explicabo fuga illum
+						laboriosam nihil, provident, repellat rerum sunt temporibus unde! A ad animi aut dolorum eaque eligendi
+						eveniet exercitationem illum, incidunt ipsam, nemo nesciunt non obcaecati perspiciatis, placeat porro
+						similique vitae voluptas voluptatem voluptates! At cumque eius perferendis recusandae sed suscipit
+						voluptates voluptatum? Harum minus molestias praesentium vero.</p>
+				</div>
+				<button class="modal__close">&#10006;</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="tasks" id="tasks">
+		<h1>Список задач</h1>
+		<ul class="tasks__list">
+			<li class="tasks__item" draggable="true">Выучить HTML</li>
+			<li class="tasks__item" draggable="true">Выучить CSS</li>
+			<li class="tasks__item" draggable="true">Выучить JavaScript</li>
+			<li class="tasks__item" draggable="true">Выучить React</li>
+			<li class="tasks__item" draggable="true">Найти работу</li>
+		</ul>
+	</section>
+
+	<section class="slider-control" id="slider-control">
+		<h1>Ползунок</h1>
+		<div id="runner" class="runner-control">
+			<div class="thumb"></div>
+		</div>
+	</section>
+
+	<section class="slider-container" id="slider-container">
+		<h1>Слайдер</h1>
+		<div class="top">
+			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--left">
+			<div class="frame">
+				<div class="slider">
+					<img src="images/Ocean.jpg" alt="Ocean" class="slider__image">
+					<img src="images/River.jpg" alt="River" class="slider__image">
+					<img src="images/Victoria.jpg" alt="Victoria" class="slider__image">
+				</div>
+			</div>
+			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--right">
+		</div>
+		<div class="bottom"></div>
+	</section>
+
+	<section class="accordion" id="accordion">
+		<h1>Аккордион</h1>
+		<div class="accordion__item box">
+			<div class="accordion__header label">
+				Заголовок 1
+			</div>
+			<div class="accordion__body content">
+				<div class="accordion__content p">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur autem, mollitia rem aperiam
+					fugit eos officia vel quidem quis officiis dolores porro beatae veritatis tenetur. Culpa ex libero a!
+				</div>
+			</div>
+		</div>
+		<div class="accordion__item">
+			<div class="accordion__header">
+				Заголовок 2
+			</div>
+			<div class="accordion__body">
+				<div class="accordion__content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos a autem perspiciatis sit eum
+					exercitationem expedita omnis ipsam voluptate veritatis dolores similique eligendi, earum quasi officia in
+					facilis dolorum!
+				</div>
+			</div>
+		</div>
+		<div class="accordion__item">
+			<div class="accordion__header">
+				Заголовок 3
+			</div>
+			<div class="accordion__body">
+				<div class="accordion__content">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta pariatur dolore consectetur perferendis
+					libero
+					nam sit magni voluptatibus voluptates autem nesciunt, praesentium quidem deserunt ipsa totam esse ullam?
+					Quod,
+					maiores!
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
