@@ -291,3 +291,22 @@ function boxHandler(event) {
 		currentContent.style.maxHeight = 0;
 	}
 }
+
+/*=========================Scroll-up=======================*/
+
+let scrollUp = () => {
+	let scrollUp = document.getElementById("scroll-up");
+	this.scrollY >= 300
+		? scrollUp.classList.add("show-scroll-btn")
+		: scrollUp.classList.remove("show-scroll-btn");
+}
+
+window.addEventListener("scroll", scrollUp);
+
+// document.getElementById("scroll-up").addEventListener("click", function () {
+// 	window.scrollTo({
+// 		top: 0,
+// 		left: 0,
+// 		behavior: 'smooth'
+// 	})
+// });

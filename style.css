@@ -556,7 +556,7 @@ h1 {
 .accordion__item {
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 60%);
 }
 
 .accordion__header {
@@ -610,3 +610,35 @@ h1 {
 }
 
 /*------------/Accordion------------- */
+
+/*------------Scroll-up------------- */
+
+.scroll-up {
+  position: fixed;
+  right: 3rem;
+  bottom: -50%;
+  background-color: #0a1621;
+  padding: 1.5rem;
+  border-radius: 5px;
+  color: mediumaquamarine;
+  font-size: 2rem;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 90%);
+  transition: bottom .3s, transform .3s;
+  animation: move 2s infinite linear;
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+.show-scroll-btn {
+  bottom: 3rem;
+}
+
+/*------------/Scroll-up------------- */
