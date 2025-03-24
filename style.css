@@ -287,7 +287,7 @@ h1 {
 }
 
 .checkbox__control:focus + .checkbox__label::before {
-  box-shadow: 0 0 0 2px #a2c5fa;
+  box-shadow: 0 0 0 2px #0d6efd;
 }
 
 /*------------/Checkbox------------- */
@@ -458,7 +458,7 @@ h1 {
 }
 
 .tasks__item:hover {
-  border: 2px dashed #888;
+  border: 2px dashed #0d6efd;
 }
 
 .selected {
@@ -624,6 +624,8 @@ h1 {
   font-size: 2rem;
   z-index: 100;
   box-shadow: 0 4px 16px rgb(0 0 0 / 90%);
+  border: none;
+  cursor: pointer;
   transition: bottom .3s, transform .3s;
   animation: move 2s infinite linear;
 }
