@@ -27,8 +27,8 @@
 				<li class="menu__item"><a href="#popup" class="menu__link">Модальное окно</a></li>
 				<li class="menu__item"><a href="#tasks" class="menu__link">Список задач</a></li>
 				<li class="menu__item"><a href="#slider-control" class="menu__link">Ползунок</a></li>
-				<li class="menu__item"><a href="#slider-container" class="menu__link">Слайдер</a></li>
 				<li class="menu__item"><a href="#accordion" class="menu__link">Аккордион</a></li>
+				<li class="menu__item"><a href="#slider-container" class="menu__link">Слайдер</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -36,17 +36,17 @@
 
 <div class="container">
 
-	<section class="label-floating">
+	<section class="label-floating section">
 		<input type="text" class="label-floating__input" required>
 		<div class="label-line">Введите своё имя</div>
 	</section>
 
-	<section class="checkbox">
+	<section class="checkbox section">
 		<input type="checkbox" class="checkbox__control" id="checkbox-1">
 		<label for="checkbox-1" class="checkbox__label">Принять пользовательские соглашения</label>
 	</section>
 
-	<section class="radio" id="radio">
+	<section class="radio section" id="radio">
 		<h1>Радиокнопка</h1>
 		<ul class="radio__list">
 			<li>
@@ -64,7 +64,7 @@
 		</ul>
 	</section>
 
-	<section class="popup" id="popup">
+	<section class="popup section" id="popup">
 		<h1>Модальное окно (Popup)</h1>
 		<button class="popup__button">Открыть модальное окно</button>
 		<div class="modal">
@@ -85,7 +85,7 @@
 		</div>
 	</section>
 
-	<section class="tasks" id="tasks">
+	<section class="tasks section" id="tasks">
 		<h1>Список задач</h1>
 		<ul class="tasks__list">
 			<li class="tasks__item" draggable="true">Выучить HTML</li>
@@ -96,30 +96,14 @@
 		</ul>
 	</section>
 
-	<section class="slider-control" id="slider-control">
+	<section class="slider-control section" id="slider-control">
 		<h1>Ползунок</h1>
 		<div id="runner" class="runner-control">
 			<div class="thumb"></div>
 		</div>
 	</section>
 
-	<section class="slider-container" id="slider-container">
-		<h1>Слайдер</h1>
-		<div class="top">
-			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--left">
-			<div class="frame">
-				<div class="slider">
-					<img src="images/Ocean.jpg" alt="Ocean" class="slider__image">
-					<img src="images/River.jpg" alt="River" class="slider__image">
-					<img src="images/Victoria.jpg" alt="Victoria" class="slider__image">
-				</div>
-			</div>
-			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--right">
-		</div>
-		<div class="bottom"></div>
-	</section>
-
-	<section class="accordion" id="accordion">
+	<section class="accordion section" id="accordion">
 		<h1>Аккордион</h1>
 		<div class="accordion__item box">
 			<div class="accordion__header label">
@@ -158,6 +142,22 @@
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<section class="slider-container section" id="slider-container">
+		<h1>Слайдер</h1>
+		<div class="top">
+			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--left">
+			<div class="frame">
+				<div class="slider">
+					<img src="images/Ocean.jpg" alt="Ocean" class="slider__image">
+					<img src="images/River.jpg" alt="River" class="slider__image">
+					<img src="images/Victoria.jpg" alt="Victoria" class="slider__image">
+				</div>
+			</div>
+			<img src="images/Arrow_icon.png" alt="arrow" class="arrow arrow--right">
+		</div>
+		<div class="bottom"></div>
 	</section>
 
 	<button class="scroll-up" id="scroll-up">

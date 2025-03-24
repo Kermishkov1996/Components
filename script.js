@@ -45,6 +45,30 @@ anchors.forEach(anchor => {
 	})
 })
 
+/*=========================Подсветка активного пункта меню при скролле=======================*/
+
+const observer = new IntersectionObserver((entries) => {
+	console.log(entries);
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			document.querySelectorAll(".menu__link").forEach(link => {
+				let id = link.getAttribute('href').substring(1);
+				if (id === entry.target.id) {
+					link.classList.add('menu__link--active');
+				} else {
+					link.classList.remove('menu__link--active');
+				}
+			})
+		}
+	});
+}, {
+	threshold: 0.5
+});
+
+document.querySelectorAll(".section").forEach(section => {
+	observer.observe(section);
+});
+
 /*=========================Header-Hide=======================*/
 
 let lastScroll = 0;
@@ -286,24 +310,24 @@ function boxHandler(event) {
 	currentBox.classList.toggle("active");
 
 	if (currentBox.classList.contains("active")) {
-		currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+		currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
 	} else {
-		currentContent.style.maxHeight = "0";
+		currentContent.style.maxHeight = `0px`;
 	}
 }
 
 /*=========================Scroll-up=======================*/
 
+let scrollUpBtn = document.getElementById("scroll-up");
+
 let scrollUp = () => {
-	let scrollUpBtn = document.getElementById("scroll-up");
 	this.scrollY >= 300
 		? scrollUpBtn.classList.add("show-scroll-btn")
 		: scrollUpBtn.classList.remove("show-scroll-btn");
 }
-
 window.addEventListener("scroll", scrollUp);
 
-document.getElementById("scroll-up").addEventListener("click", function() {
+scrollUpBtn.addEventListener("click", function () {
 	window.scrollTo({
 		top: 0,
 		left: 0,
